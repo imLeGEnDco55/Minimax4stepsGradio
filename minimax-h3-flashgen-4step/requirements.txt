@@ -1,0 +1,18 @@
+# diffusers from the MiniMax-H3 PR (https://github.com/huggingface/diffusers/pull/14371), pinned to a commit
+# on its minimax-h3-refactor branch. This Space subclasses its block classes in h3_split_blocks.py.
+#   665f578278365ea4a3318cb8c9b66ce6c01204b9 = refs/pull/14371/head at the time of this deploy
+--extra-index-url https://download.pytorch.org/whl/cu130
+diffusers @ git+https://github.com/huggingface/diffusers.git@665f578278365ea4a3318cb8c9b66ce6c01204b9
+torch==2.11.0
+torchvision==0.26.0
+transformers==5.8.0
+accelerate==1.14.0
+huggingface-hub==1.24.0
+gradio @ https://huggingface.co/buckets/gradio/pypi-previews/resolve/a9ce60ae03123ed6374b739d862e62dcae2f451e/gradio-6.25.0-py3-none-any.whl
+spaces==0.51.1
+av
+pillow
+numpy
+requests
+safetensors>=0.8.0
+peft

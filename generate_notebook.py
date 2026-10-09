@@ -23,9 +23,9 @@ def create_notebook():
                 "source": [
                     "# ⚡ MiniMax-H3 4-Step FlashGen LoRA — Google Colab\n",
                     "\n",
-                    "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/)\n",
+                    "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/imLeGEnDco55/Minimax4stepsGradio/blob/main/minimax_h3_flashgen_colab.ipynb)\n",
                     "\n",
-                    "Este notebook permite ejecutar la aplicación Gradio de **MiniMax-H3 con FlashGen 4-step distillation LoRA** directamente en Google Colab, exponiendo la interfaz a través de un túnel seguro de **Cloudflare (`trycloudflare.com`)**.\n",
+                    "Este notebook ejecuta la aplicación Gradio de **MiniMax-H3 con FlashGen 4-step distillation LoRA** directamente en Google Colab desde el repositorio [`imLeGEnDco55/Minimax4stepsGradio`](https://github.com/imLeGEnDco55/Minimax4stepsGradio), exponiendo la interfaz a través de un túnel seguro de **Cloudflare (`trycloudflare.com`)**.\n",
                     "\n",
                     "---\n",
                     "\n",
@@ -91,15 +91,17 @@ def create_notebook():
                     "# Instalar ffmpeg para decodificación y ensamblado de video/audio\n",
                     "!apt-get update -qq && apt-get install -y -qq ffmpeg\n",
                     "\n",
-                    "# Clonar el repositorio del Space de Hugging Face\n",
-                    "SPACE_DIR = \"/content/minimax-h3-flashgen-4step\"\n",
-                    "if not os.path.exists(SPACE_DIR):\n",
-                    "    print(\"Clonando el Space minimax-h3-flashgen-4step...\")\n",
-                    "    !git clone https://huggingface.co/spaces/hugging-apps/minimax-h3-flashgen-4step {SPACE_DIR}\n",
+                    "# Clonar repositorio GitHub personal de imLeGEnDco\n",
+                    "REPO_URL = \"https://github.com/imLeGEnDco55/Minimax4stepsGradio\"\n",
+                    "REPO_DIR = \"/content/Minimax4stepsGradio\"\n",
+                    "if not os.path.exists(REPO_DIR):\n",
+                    "    print(f\"Clonando {REPO_URL}...\")\n",
+                    "    !git clone {REPO_URL} {REPO_DIR}\n",
                     "else:\n",
-                    "    print(f\"Repositorio ya existente en {SPACE_DIR}\")\n",
+                    "    print(f\"Repositorio ya existente en {REPO_DIR}. Actualizando con git pull...\")\n",
+                    "    !git -C {REPO_DIR} pull\n",
                     "\n",
-                    "%cd {SPACE_DIR}\n"
+                    "%cd {REPO_DIR}\n"
                 ]
             },
             {
@@ -110,7 +112,7 @@ def create_notebook():
                 "source": [
                     "# @title 3. ⚙️ Instalar Dependencias de Python\n",
                     "# Instala PyTorch, Diffusers (PR 14371 con refactor H3), Gradio y utilidades\n",
-                    "%cd /content/minimax-h3-flashgen-4step\n",
+                    "%cd /content/Minimax4stepsGradio\n",
                     "!pip install --upgrade pip\n",
                     "!pip install -r requirements.txt\n"
                 ]
@@ -184,7 +186,7 @@ def create_notebook():
                     "import threading\n",
                     "import os\n",
                     "\n",
-                    "%cd /content/minimax-h3-flashgen-4step\n",
+                    "%cd /content/Minimax4stepsGradio\n",
                     "\n",
                     "PORT = 7860\n",
                     "\n",

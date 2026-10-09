@@ -7,12 +7,13 @@
 
 ## 🎯 ESTADO ACTUAL
 
-Desarrollo y configuración de Notebook para Google Colab que levanta la aplicación Gradio del Space `hugging-apps/minimax-h3-flashgen-4step` con exposición pública vía **Cloudflare Tunnel (`trycloudflare.com`)**.
+Desarrollo y configuración de Notebook para Google Colab que clona y levanta la aplicación Gradio desde el repositorio personal [`imLeGEnDco55/Minimax4stepsGradio`](https://github.com/imLeGEnDco55/Minimax4stepsGradio) con exposición pública vía **Cloudflare Tunnel (`trycloudflare.com`)**.
 
 ---
 
 ## ⚙️ STACK & ARQUITECTURA
 
+- **Repositorio Fuente**: `https://github.com/imLeGEnDco55/Minimax4stepsGradio`
 - **Modelo Base**: `MiniMaxAI/MiniMax-H3` (Transformer omni-modal 33B para generación de video + audio estéreo sincronizado).
 - **LoRA Distilled**: `Beidouqixing/minimax-h3-4step-lora-flashgen` (4 pasos de inferencia mediante DMD2 / VSD).
 - **Split Pipeline**:
@@ -27,9 +28,9 @@ Desarrollo y configuración de Notebook para Google Colab que levanta la aplicac
 
 ## 📁 ARCHIVOS PRINCIPALES
 
-- [minimax_h3_flashgen_colab.ipynb](file:///e:/Appz/Minimax%20H3/minimax_h3_flashgen_colab.ipynb): Cuaderno interactivo listo para importar en Google Colab.
+- [minimax_h3_flashgen_colab.ipynb](file:///e:/Appz/Minimax%20H3/minimax_h3_flashgen_colab.ipynb): Cuaderno interactivo configurado para clonar y ejecutar desde `imLeGEnDco55/Minimax4stepsGradio`.
 - [generate_notebook.py](file:///e:/Appz/Minimax%20H3/generate_notebook.py): Generador programático del notebook JSON.
-- [minimax-h3-flashgen-4step/](file:///e:/Appz/Minimax%20H3/minimax-h3-flashgen-4step): Repositorio clonado del Space de Hugging Face.
+- [minimax-h3-flashgen-4step/](file:///e:/Appz/Minimax%20H3/minimax-h3-flashgen-4step): Copia local del Space original.
 
 ---
 
